@@ -83,7 +83,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 // import Footer from "components/footers/MiniCenteredFooter.js";
 
 /* Ready Made Pages (from demos folder) */
-// import EventLandingPage from "demos/EventLandingPage.js";
+import EventLandingPage from "demos/EventLandingPage.js";
 // import HotelTravelLandingPage from "demos/HotelTravelLandingPage.js";
 // import AgencyLandingPage from "demos/AgencyLandingPage.js";
 // import SaaSProductLandingPage from "demos/SaaSProductLandingPage.js";
@@ -107,32 +107,32 @@ import ThankYouPage from "ThankYouPage.js";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-export default function App() {
+//export default function App() {
   // If you want to disable the animation just use the disabled `prop` like below on your page's component
   // return <AnimationRevealPage disabled>xxxxxxxxxx</AnimationRevealPage>;
 
 
-  return (
-    <Router>
-      <Switch>
-        <Route path="/components/:type/:subtype/:name">
-          <ComponentRenderer />
-        </Route>
-        <Route path="/components/:type/:name">
-          <ComponentRenderer />
-        </Route>
-        <Route path="/thank-you">
-          <ThankYouPage />
-        </Route>
-        <Route path="/">
-          <MainLandingPage />
-        </Route>
-      </Switch>
-    </Router>
-  );
-}
+  //return (
+    //<Router>
+      //<Switch>
+        //<Route path="/components/:type/:subtype/:name">
+          //<ComponentRenderer />
+        //</Route>
+        //<Route path="/components/:type/:name">
+          //<ComponentRenderer />
+        //</Route>
+        //<Route path="/thank-you">
+          //<ThankYouPage />
+        //</Route>
+        //<Route path="/">
+          //<MainLandingPage />
+        //</Route>
+      //</Switch>
+    //</Router>
+  //);
+//}
 
-// export default EventLandingPage;
+export default EventLandingPage;
 // export default HotelTravelLandingPage;
 // export default AgencyLandingPage;
 // export default SaaSProductLandingPage;
