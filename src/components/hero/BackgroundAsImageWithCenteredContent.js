@@ -65,11 +65,11 @@ export default () => {
         <StyledHeader links={navLinks} />
         <Content>
           <Heading>
-              Book Music & Comedy Events
+              Practice Voice Acting 
               <br />
-              anywhere in New York
+              by Matching with People!
           </Heading>
-          <PrimaryAction>Search Events Near Me</PrimaryAction>
+          <PrimaryAction>Search Scripts Here</PrimaryAction>
         </Content>
       </HeroContainer>
     </Container>
