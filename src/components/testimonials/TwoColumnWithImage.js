@@ -101,13 +101,13 @@ export default () => {
     }
   ];
   return (
-    <Container style={{background: '#390ee6'}}>
+    <Container style={{background: '#50b9bd'}}>
       <Content>
         <HeadingInfoContainer>
-          <HeadingTitle style={{color: '#FFFFFF'}}>Our Awesome Customers</HeadingTitle>
+          <HeadingTitle style={{color: '#000000'}}>Our Awesome Customers</HeadingTitle>
           <HeadingDescription></HeadingDescription>
         </HeadingInfoContainer>
-        <TestimonialSliderContainer style={{color: '#FFFFFF'}}>
+        <TestimonialSliderContainer style={{color: '#000000'}}>
           <TestimonialSlider nextArrow={<NextArrow />} prevArrow={<PreviousArrow />}>
             {testimonials.map((testimonial, index) => (
               <Testimonial key={index}>

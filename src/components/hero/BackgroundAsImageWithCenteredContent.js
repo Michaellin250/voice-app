@@ -52,7 +52,7 @@ export default () => {
       </NavLink>
     </NavLinks>,
     <NavLinks key={2}>
-      <PrimaryLink href="/#" style={{background: '#390ee6'}}>
+      <PrimaryLink href="/#" style={{background: '#50b9bd', color:'#000000'}}>
         Login
       </PrimaryLink>
     </NavLinks>
@@ -69,7 +69,7 @@ export default () => {
               <br />
               by Matching with People!
           </Heading>
-          <PrimaryAction style={{background: '#390ee6'}}>Search Scripts Here</PrimaryAction>
+          <PrimaryAction style={{background: '#50b9bd', color:'#000000'}}>Search Scripts Here</PrimaryAction>
         </Content>
       </HeroContainer>
     </Container>

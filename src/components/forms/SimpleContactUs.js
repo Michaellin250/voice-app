@@ -38,7 +38,7 @@ export default () => {
   return (
     <Container>
       <Content>
-        <FormContainer style={{background: '#A89600', color:'#390ee6'}}>
+        <FormContainer style={{background: '#000000', color:'#FFFFFF'}}>
           <div tw="mx-auto max-w-4xl">
             <h2>Organize an Event</h2>
             <form action="#">

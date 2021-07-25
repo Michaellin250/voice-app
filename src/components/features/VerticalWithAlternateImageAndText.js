@@ -74,24 +74,24 @@ export default () => {
   ];
 
   return (
-    <Container style={{background: '#390ee6'}}>
+    <Container style={{background: '#50b9bd'}}>
       <SingleColumn>
         <HeadingInfoContainer>
-          <HeadingTitle style={{color: '#FFFFFF'}}>Popular Events</HeadingTitle>
-          <HeadingDescription style={{color: '#FFFFFF'}}>
+          <HeadingTitle style={{color: '#000000'}}>Popular Events</HeadingTitle>
+          <HeadingDescription style={{color: '#000000'}}>
             Here are some of the most popular events in New York City curated by professionals.
           </HeadingDescription>
         </HeadingInfoContainer>
 
-        <Content style={{color: '#FFFFFF'}}>
+        <Content style={{color: '#000000'}}>
           {cards.map((card, i) => (
             <Card key={i} reversed={i % 2 === 1}>
               <Image imageSrc={card.imageSrc} />
               <Details>
-                <Subtitle style={{color: '#FFFFFF'}}>{card.subtitle}</Subtitle>
-                <Title style={{color: '#FFFFFF'}}>{card.title}</Title>
+                <Subtitle style={{color: '#000000'}}>{card.subtitle}</Subtitle>
+                <Title style={{color: '#000000'}}>{card.title}</Title>
                 <Description>{card.description}</Description>
-                <Link href={card.url} style={{color: '#FFFFFF'}}>See Event Details</Link>
+                <Link href={card.url} style={{color: '#000000'}}>See Event Details</Link>
               </Details>
             </Card>
           ))}

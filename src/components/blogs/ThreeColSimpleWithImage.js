@@ -54,20 +54,20 @@ export default () => {
     }
   ];
   return (
-    <Container style={{background: '#A89600', color:'#390ee6'}}>
+    <Container style={{background: '#000000', color:'#FFFFFF'}}>
       <Content>
         <HeadingInfoContainer>
           <HeadingTitle>Popular Blog Posts</HeadingTitle>
-          <HeadingDescription style={{color:'#390ee6'}}>Some amazing blog posts that are written by even more amazing people.</HeadingDescription>
+          <HeadingDescription style={{color:'#FFFFFF'}}>Some amazing blog posts that are written by even more amazing people.</HeadingDescription>
         </HeadingInfoContainer>
         <ThreeColumn>
           {blogPosts.map((post, index) => (
             <Column key={index}>
               <Card>
                 <Image imageSrc={post.imageSrc} />
-                <Category style={{color:'#390ee6'}}>{post.category}</Category>
+                <Category style={{color:'#FFFFFF'}}>{post.category}</Category>
                 <Title>{post.title}</Title>
-                <Link href={post.url} style={{color:'#390ee6'}}>Read Post</Link>
+                <Link href={post.url} style={{color:'#FFFFFF'}}>Read Post</Link>
               </Card>
             </Column>
           ))}

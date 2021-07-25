@@ -36,7 +36,7 @@ const SocialLink = styled.a`
 
 export default () => {
   return (
-    <Container style={{background: '#FFFFFF', color:'#390ee6'}}>
+    <Container style={{background: '#FFFFFF', color:'#50b9bd'}}>
       <FiveColumns>
         <WideColumn>
           <LogoContainer>
