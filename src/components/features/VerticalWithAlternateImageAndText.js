@@ -46,7 +46,7 @@ export default () => {
       imageSrc:
         "https://images.unsplash.com/photo-1550699026-4114bbf4fb49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80",
       subtitle: "Paid",
-      title: "Loachella, NYC",
+      title: "Loachella, NYC",      
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       url: "https://timerse.com"
@@ -74,24 +74,24 @@ export default () => {
   ];
 
   return (
-    <Container>
+    <Container style={{background: '#390ee6'}}>
       <SingleColumn>
         <HeadingInfoContainer>
-          <HeadingTitle>Popular Events</HeadingTitle>
-          <HeadingDescription>
+          <HeadingTitle style={{color: '#FFFFFF'}}>Popular Events</HeadingTitle>
+          <HeadingDescription style={{color: '#FFFFFF'}}>
             Here are some of the most popular events in New York City curated by professionals.
           </HeadingDescription>
         </HeadingInfoContainer>
 
-        <Content>
+        <Content style={{color: '#FFFFFF'}}>
           {cards.map((card, i) => (
             <Card key={i} reversed={i % 2 === 1}>
               <Image imageSrc={card.imageSrc} />
               <Details>
-                <Subtitle>{card.subtitle}</Subtitle>
-                <Title>{card.title}</Title>
+                <Subtitle style={{color: '#FFFFFF'}}>{card.subtitle}</Subtitle>
+                <Title style={{color: '#FFFFFF'}}>{card.title}</Title>
                 <Description>{card.description}</Description>
-                <Link href={card.url}>See Event Details</Link>
+                <Link href={card.url} style={{color: '#FFFFFF'}}>See Event Details</Link>
               </Details>
             </Card>
           ))}

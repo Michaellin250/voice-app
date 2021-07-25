@@ -38,15 +38,15 @@ export default () => {
   return (
     <Container>
       <Content>
-        <FormContainer>
+        <FormContainer style={{background: '#A89600', color:'#390ee6'}}>
           <div tw="mx-auto max-w-4xl">
             <h2>Organize an Event</h2>
             <form action="#">
               <TwoColumn>
                 <Column>
-                  <InputContainer>
+                  <InputContainer >
                     <Label htmlFor="name-input">Your Name</Label>
-                    <Input id="name-input" type="text" name="name" placeholder="E.g. John Doe" />
+                    <Input id="name-input" type="text" name="name" placeholder="E.g. John Doe"/>
                   </InputContainer>
                   <InputContainer>
                     <Label htmlFor="email-input">Your Email Address</Label>
