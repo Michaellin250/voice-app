@@ -5,7 +5,10 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "./components/headers/light.js";
-
+import Modal from 'react-bootstrap/Modal';
+import "bootstrap/dist/css/bootstrap.min.css"; //npm i react-bootstrap bootstrap
+import { useEffect, useState } from "react";
+import { Button} from 'react-bootstrap';
 
 const StyledHeader = styled(Header)`
   ${tw`pt-8 max-w-none w-full`}
@@ -111,23 +114,59 @@ const Field = React.forwardRef(({label, type}, ref) => {
 const Form = ({onSubmit}) => {
   const usernameRef = React.useRef();
   const passwordRef = React.useRef();
-  const handleSubmit = e => {
+  const emailRef = React.useRef();
+  const usernameRef2 = React.useRef();
+  const passwordRef2 = React.useRef();  
+  const passwordRef3 = React.useRef();
+  const [show, setShow] = useState(false);//https://react-bootstrap.github.io/components/modal/
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+  const handleSubmit = e => {//for login
       e.preventDefault();
       const data = {
           username: usernameRef.current.value,
-          password: passwordRef.current.value
+          password: passwordRef.current.value          
       };
       onSubmit(data);
   };
-  return (
+  const handleSubmit2 = e => {//for signup
+    e.preventDefault();
+    const data = {
+         email: emailRef.current.value,  
+         username: usernameRef2.current.value,
+         password: passwordRef2.current.value,
+         passwordRepeat: passwordRef3.current.value         
+    };
+    onSubmit(data);
+};
+  return (  
+    <>
     <form style={formStyle} onSubmit={handleSubmit} >
       <Field ref={usernameRef} label="Username:" type="text" />
-      <Field ref={passwordRef} label="Password:" type="password" />
+      <Field ref={passwordRef} label="Password:" type="password" />      
       <div>
         <button style={submitStyle} type="submit">Submit</button>
-        <button style={submitStyle} type="button">Sign Up</button>
+        <button style={submitStyle} type="button" onClick={handleShow}>Sign Up</button>
       </div>
-    </form>
+    </form>   
+   <form onSubmit={handleSubmit2}>
+   <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Sign Up</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Sign up for Voice Match today!</Modal.Body>
+          <Field ref={emailRef} label="Email:" type="text" />
+          <Field ref={usernameRef2} label="Username:" type="text" />
+          <Field ref={passwordRef2} label="Password:" type="password" />
+          <Field ref={passwordRef3} label="Repeat Password:" type="password" />
+          <Modal.Footer>
+            <Button variant="primary" type="submit" onClick={handleClose}>
+              Sign Up
+            </Button>
+          </Modal.Footer>
+        </Modal>
+   </form>
+   </>
   );
 };
 
