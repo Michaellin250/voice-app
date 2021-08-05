@@ -150,15 +150,17 @@ const Form = ({onSubmit}) => {
       </div>
     </form>   
    <form onSubmit={handleSubmit2}>
-   <Modal show={show} onHide={handleClose}>
+   <Modal show={show} onHide={handleClose} style={{ width:"25%" ,position: "absolute", left: "50%", top: "50%", transform: "translate(-50%, -50%)"}}>
           <Modal.Header closeButton>
             <Modal.Title>Sign Up</Modal.Title>
           </Modal.Header>
           <Modal.Body>Sign up for Voice Match today!</Modal.Body>
+          <div style={{ width:"80%", margin: "0 auto" }}>
           <Field ref={emailRef} label="Email:" type="text" />
           <Field ref={usernameRef2} label="Username:" type="text" />
           <Field ref={passwordRef2} label="Password:" type="password" />
           <Field ref={passwordRef3} label="Repeat Password:" type="password" />
+          </div>
           <Modal.Footer>
             <Button variant="primary" type="submit" onClick={handleClose}>
               Sign Up
