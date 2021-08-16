@@ -13,7 +13,6 @@ export default () => (
     <Features />
     <Blog />
     <Testimonial />
-    <ContactUsForm />
-    <Footer />
+    <ContactUsForm />    
   </AnimationRevealPage>
 );

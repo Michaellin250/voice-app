@@ -36,12 +36,12 @@ const SocialLink = styled.a`
 
 export default () => {
   return (
-    <Container style={{background: '#FFFFFF', color:'#50b9bd'}}>
+    <Container style={{background: '#000', color:'#fff'}}>
       <FiveColumns>
         <WideColumn>
           <LogoContainer>
             <LogoImg src={LogoImage} />
-            <LogoText>Voice Match</LogoText>
+            <LogoText style={{color: "#fff"}}>Voice Match</LogoText>
           </LogoContainer>
           <CompanyDescription>
             Voice Match is the voice practice hub for voice actors.

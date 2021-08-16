@@ -22,13 +22,13 @@ const StyledHeader = styled(Header)`
 
 const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
-  ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-screen min-h-144`}
+  ${tw`bg-center bg-cover h-screen`}
   background-image: url("https://images.pexels.com/photos/3783471/pexels-photo-3783471.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
 `;
 
 const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-black opacity-75`;
 
-const HeroContainer = tw.div`z-20 relative px-6 sm:px-8 mx-auto h-full flex flex-col`;
+const HeroContainer = tw.div`overflow-auto z-20 relative px-6 sm:px-8 mx-auto h-full flex flex-col`;
 const Content = tw.div`px-4 flex flex-1 flex-col justify-center items-center`;
 
 const Heading = styled.h1`

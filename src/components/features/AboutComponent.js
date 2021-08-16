@@ -8,10 +8,7 @@ const Container = tw.div`relative`;
 
 const SingleColumn = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 
-const HeadingInfoContainer = tw.div`flex flex-col items-center`;
-const HeadingDescription = tw.p`mt-4 font-medium text-gray-600 text-center max-w-sm`;
-
-const Content = tw.div`mt-16`;
+const Content = tw.div`mt--24`;
 
 const Card = styled.div(props => [
   tw`mt-24 md:flex justify-center items-center`,
@@ -40,6 +37,12 @@ const SvgDotPattern4 = tw(
   SvgDotPatternIcon
 )`absolute bottom-0 right-0 transform translate-x-20 rotate-90 -translate-y-24 -z-10 opacity-25 text-primary-500 fill-current w-24`;
 
+const Heading = styled.h1`
+  ${tw`p-5 text-3xl text-center sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-100 leading-snug -mt-24 sm:mt-0`}
+  span {
+    ${tw`inline-block mt-2`}
+  }
+`;
 export default () => {
   const cards = [
     {
@@ -76,13 +79,9 @@ export default () => {
   return (
     <Container style={{background: '#50b9bd'}}>
       <SingleColumn>
-        <HeadingInfoContainer>
-          <HeadingTitle style={{color: '#000000'}}>How it works</HeadingTitle>
-          <HeadingDescription style={{color: '#000000'}}>
-            Describe how Voice Match works!
-          </HeadingDescription>
-        </HeadingInfoContainer>
-
+       <Heading style={{color: '#000'}}>
+              About Us
+       </Heading> 
         <Content style={{color: '#000000'}}>
           {cards.map((card, i) => (
             <Card key={i} reversed={i % 2 === 1}>

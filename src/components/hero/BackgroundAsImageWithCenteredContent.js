@@ -65,8 +65,7 @@ export default () => {
               Practice Voice Acting 
               <br />
               by Matching with People!
-          </Heading>
-          <PrimaryLink href="../Search" style={{background: '#50b9bd', color:'#000000'}}>Search Scripts Here</PrimaryLink>
+          </Heading>          
         </Content>
       </HeroContainer>
     </Container>
