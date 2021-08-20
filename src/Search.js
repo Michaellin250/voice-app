@@ -2,7 +2,7 @@ import React from "react";
 import {Link } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
-import SearchComponent from "components/features/SearchComponent";
+import SearchTemplate from "components/features/SearchTemplate";
 import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "./components/headers/light.js";
 
 const StyledHeader = styled(Header)`
@@ -42,7 +42,7 @@ function Search() {
   <div style={{backgroundColor: "#000"}}>  
   <StyledHeader links={navLinks} />
   </div>
-  <SearchComponent/> 
+  <SearchTemplate/> 
   
   </>
   );

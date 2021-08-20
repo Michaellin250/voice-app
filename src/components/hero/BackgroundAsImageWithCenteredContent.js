@@ -62,9 +62,9 @@ export default () => {
         <StyledHeader links={navLinks} />
         <Content>
           <Heading>
-              Practice Voice Acting 
+              Practice voice acting 
               <br />
-              by Matching with People!
+              by matching with people!
           </Heading>          
         </Content>
       </HeroContainer>

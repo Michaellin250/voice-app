@@ -3,7 +3,7 @@ import {Link } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import PostComponent from "components/features/PostComponent";
+import PostTemplate from "components/features/PostTemplate";
 
 import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "./components/headers/light.js";
 
@@ -46,7 +46,7 @@ const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
       <div style={{backgroundColor: "#000"}}>  
       <StyledHeader links={navLinks} />
       </div>
-      <PostComponent/> 
+      <PostTemplate/> 
       </>
     );
   };

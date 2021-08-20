@@ -3,6 +3,9 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { ReactComponent as SvgDotPatternIcon } from "../../images/dot-pattern.svg";
 import { SectionHeading as HeadingTitle } from "../misc/Headings.js";
+import Think from "../../images/think.svg"
+import Build from "../../images/build.svg"
+import Smile from "../../images/smile.svg"
 
 const Container = tw.div`relative`;
 
@@ -16,12 +19,12 @@ const Card = styled.div(props => [
 ]);
 const Image = styled.div(props => [
   `background-image: url("${props.imageSrc}");`,
-  tw`rounded md:w-1/2 lg:w-5/12 xl:w-1/3 flex-shrink-0 h-80 md:h-144 bg-cover bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`
+  tw`rounded md:w-1/2 lg:w-5/12 xl:w-1/3 flex-shrink-0 h-80 md:h-96 bg-no-repeat bg-center mx-4 sm:mx-8 md:mx-4 lg:mx-8`
 ]);
 const Details = tw.div`mt-4 md:mt-0 md:max-w-md mx-4 sm:mx-8 md:mx-4 lg:mx-8`;
 const Subtitle = tw.div`font-bold tracking-wide text-secondary-100`;
 const Title = tw.h4`text-3xl font-bold text-gray-900`;
-const Description = tw.p`mt-2 text-sm leading-loose`;
+const Description = tw.p`mt-2 text-xl leading-loose`;
 const Link = tw.a`inline-block mt-4 text-sm text-primary-500 font-bold cursor-pointer transition duration-300 border-b-2 border-transparent hover:border-primary-500`;
 
 const SvgDotPattern1 = tw(
@@ -46,33 +49,30 @@ const Heading = styled.h1`
 export default () => {
   const cards = [
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1550699026-4114bbf4fb49?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=632&q=80",
-      subtitle: "Paid",
-      title: "Loachella, NYC",      
+      imageSrc: Think,
+      subtitle: "",
+      title: "An Idea",      
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      url: "https://timerse.com"
+        "Voice Match was born in 2021 when we brainstormed of a way for voice actors to interact with each other and practice their skills.",
+      url: ""
     },
 
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1543423924-b9f161af87e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
-      subtitle: "Free",
-      title: "Rock In Rio, Upstate",
+      imageSrc: Build,
+      subtitle: "",
+      title: "Development",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      url: "https://timerse.com"
+        "After realizing how beneficial a technology that allows voice actors to collaborate can be, we set out to work in developing Voice Match.",
+      url: ""
     },
 
     {
-      imageSrc:
-        "https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=658&q=80",
-      subtitle: "Exclusive",
-      title: "Lollapalooza, Manhattan",
+      imageSrc: Smile,
+      subtitle: "",
+      title: "Improvement",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      url: "https://timerse.com"
+        "We are dedicated to maintaining and improving Voice Match for all current and future voice actors.",
+      url: ""
     }
   ];
 
@@ -80,7 +80,7 @@ export default () => {
     <Container style={{background: '#50b9bd'}}>
       <SingleColumn>
        <Heading style={{color: '#000'}}>
-              About Us
+              About us
        </Heading> 
         <Content style={{color: '#000000'}}>
           {cards.map((card, i) => (
@@ -89,8 +89,7 @@ export default () => {
               <Details>
                 <Subtitle style={{color: '#000000'}}>{card.subtitle}</Subtitle>
                 <Title style={{color: '#000000'}}>{card.title}</Title>
-                <Description>{card.description}</Description>
-                <Link href={card.url} style={{color: '#000000'}}>See Event Details</Link>
+                <Description>{card.description}</Description>                
               </Details>
             </Card>
           ))}

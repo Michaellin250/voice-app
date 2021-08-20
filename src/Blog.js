@@ -2,7 +2,7 @@ import React from "react";
 import {Link } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
-import BlogComponent from "components/features/BlogComponent";
+import BlogTemplate from "components/features/BlogTemplate";
 import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "./components/headers/light.js";
 
 const StyledHeader = styled(Header)`
@@ -42,7 +42,7 @@ function Blog() {
   <div style={{backgroundColor: "#000"}}>  
   <StyledHeader links={navLinks} />
   </div>
-  <BlogComponent/> 
+  <BlogTemplate/> 
   
   </>
   );
