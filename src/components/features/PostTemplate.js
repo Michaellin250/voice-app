@@ -1,12 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 
 import Header, {
   NavLink,
-  NavLinks,
   PrimaryLink as PrimaryLinkBase,
   LogoLink,
   NavToggle,
@@ -23,7 +21,6 @@ const StyledHeader = styled(Header)`
   }
 `;
 
-const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`;
 const Container = styled.div`
   ${tw`bg-center bg-cover h-screen`}
 `;

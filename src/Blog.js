@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import tw from "twin.macro";
 import styled from "styled-components";
 import BlogTemplate from "components/features/BlogTemplate";
