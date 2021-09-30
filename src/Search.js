@@ -2,6 +2,7 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import SearchTemplate from "components/features/SearchTemplate";
+import SearchBar from "components/features/Search.js";
 import Header, {
   NavLink,
   NavLinks,
@@ -26,6 +27,7 @@ const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`;
 function Search() {
   const navLinks = [
     <NavLinks key={1}>
+      <SearchBar />
       <NavLink href="../About">About</NavLink>
       <NavLink href="../Blog">Blog</NavLink>
       <NavLink href="../Post">Post</NavLink>

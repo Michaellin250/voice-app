@@ -3,6 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import PostTemplate from "components/features/PostTemplate";
+import Search from "components/features/Search.js";
 
 import Header, {
   NavLink,
@@ -27,6 +28,7 @@ const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`;
 
 const navLinks = [
   <NavLinks key={1}>
+    <Search />
     <NavLink href="../About">About</NavLink>
     <NavLink href="../Blog">Blog</NavLink>
     <NavLink href="../Post">Post</NavLink>

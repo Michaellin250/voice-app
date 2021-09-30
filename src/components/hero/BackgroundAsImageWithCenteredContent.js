@@ -2,8 +2,16 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
+import Search from "components/features/Search.js";
 
-import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
+import Header, {
+  NavLink,
+  NavLinks,
+  PrimaryLink as PrimaryLinkBase,
+  LogoLink,
+  NavToggle,
+  DesktopNavLinks,
+} from "../headers/light.js";
 
 const StyledHeader = styled(Header)`
   ${tw`pt-8 max-w-none w-full`}
@@ -15,7 +23,7 @@ const StyledHeader = styled(Header)`
   }
 `;
 
-const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
+const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`;
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-screen min-h-144`}
   background-image: url("https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
@@ -38,21 +46,19 @@ const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-10 text-sm sm:text-bas
 export default () => {
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="../About">
-        About
-      </NavLink>
-      <NavLink href="../Blog">
-        Blog
-      </NavLink>
-      <NavLink href="../Post">
-        Post
-      </NavLink>
+      <Search />
+      <NavLink href="../About">About</NavLink>
+      <NavLink href="../Blog">Blog</NavLink>
+      <NavLink href="../Post">Post</NavLink>
     </NavLinks>,
     <NavLinks key={2}>
-      <PrimaryLink href="../Login" style={{background: '#50b9bd', color:'#000000'}}>
+      <PrimaryLink
+        href="../Login"
+        style={{ background: "#50b9bd", color: "#000000" }}
+      >
         Login
       </PrimaryLink>
-    </NavLinks>
+    </NavLinks>,
   ];
 
   return (
@@ -62,10 +68,10 @@ export default () => {
         <StyledHeader links={navLinks} />
         <Content>
           <Heading>
-              Practice voice acting 
-              <br />
-              by matching with people!
-          </Heading>          
+            Practice voice acting
+            <br />
+            by matching with people!
+          </Heading>
         </Content>
       </HeroContainer>
     </Container>
