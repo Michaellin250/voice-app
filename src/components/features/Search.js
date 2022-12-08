@@ -7,19 +7,17 @@ const SearchBar = () => (
     <input
       type="text"
       id="header-search"
-      style={{ width: 250 }}
-      placeholder="Search posts"
+      style={{
+        width: 250,
+        borderRadius: "15px",
+        paddingTop: "5px",
+        paddingBottom: "5px",
+        paddingLeft: "10px",
+        marginBottom: "5%",
+      }}
+      placeholder="Search posts..."
       name="s"
     />
-    <button
-      type="submit"
-      style={{
-        backgroundColor: "white",
-      }}
-    >
-      Search
-    </button>
   </form>
 );
-
 export default SearchBar;
